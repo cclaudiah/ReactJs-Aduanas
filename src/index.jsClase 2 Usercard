@@ -1,0 +1,42 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Componente } from "./Componente_clase1";
+import JSComponente from "./JSComponente";
+import JSXComponente from "./JSXComponente";
+import { Saludos, UserCard, Saluditos } from "./Saludos";
+import Producto, { Navbar } from "./Producto";
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+root.render(
+    <>
+        <Saludos title="hola mundo" />
+        <Saludos x="un numero" />
+        <Saludos z={true} />
+        <Saludos y={[1, 2, 3]} />
+        <Saludos w="Servicio Nacional de Aduanas" />
+        <Saluditos title="Saluditos" />
+
+        <UserCard
+            nombre="Claudia Carrasco"
+            casado={false}
+            cuanta={16000}
+            puntos={[80, 50, 30]}
+            direccion={{
+                calle: "flasa 123",
+                ciudad: "Valpo"
+            }}
+        />
+
+        <UserCard
+            nombre="Leo Muzzio"
+            casado={true}
+            cuanta={20000}
+            puntos={[50, 30]}
+            direccion={{
+                calle: "falsa 123",
+                ciudad: "Viña"
+            }}
+        />
+    </>
+)

@@ -1,0 +1,33 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Componente } from "./Componente_clase1";
+import JSComponente from "./JSComponente";
+import JSXComponente from "./JSXComponente";
+import { Saludos, UserCard} from "./Saludos";
+import Producto, {Navbar} from "./Producto";
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+
+/*function Saludos(){
+    const casado = true;
+    /*if(casado){
+        return <h1>Estoy casado</h1>
+    }else{
+        return <h1> No estoy casado</h1>
+    }
+    return <h1>{casado ? 'Estoy casado' : 'No estoy casado'}</h1>
+
+    
+}*/
+
+root.render(
+    <>
+        <JSComponente/>
+        <JSXComponente/>
+        <Saludos/>
+        <UserCard/>
+        <Producto/>
+        <Navbar/>
+    </>
+    
+)
