@@ -1,0 +1,50 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Componente } from "./Componente_clase1";
+import JSComponente from "./JSComponente";
+import JSXComponente from "./JSXComponente";
+import { Saludos, UserCard, Saluditos } from "./Saludos";
+import Producto, { Navbar } from "./Producto";
+import { Contador } from "./Contador.js"
+import EstadoCompleto from "./EstadoComplemento"
+import { Button } from "./Button";
+import { Tareas } from "./Tareas";
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const handleChange = (e) => {
+    console.log(e.target.value+'........')
+}
+
+// (e) captura el evento
+const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("Enviando datos desde un formulario")
+    alert('enviado')
+}
+
+root.render(
+    <>
+        {/* primera actividad css
+        <Tareas flag={true}/> */}
+
+       {/* evento como constante
+       <input id="input1" onChange={handleChange} /> */}
+
+       {/* 
+       llama el const
+       <form onSubmit={handleChange} */}
+        {/* antes de poner el const handleSubmit
+        <form onSubmit={(e) => {
+            // en javascript evitar el comportamiento predeterminado de un evento
+            e.preventDefault()
+            console.log("Enviando datos desde un formulario")
+        }}> */}
+        <form onSubmit={handleSubmit}> 
+        {/* Puede ser el handleChange */}
+            <h1>Registro de usuario</h1>
+            <button>Enviar</button>
+        </form>
+       
+    </>
+)

@@ -11,16 +11,11 @@ import { Button } from "./Button";
 import { Tareas } from "./Tareas";
 import './styles.css'
 import { FormularioControlado } from "./FormularioControlado";
-import { FormularioNoControlado } from "./FormularioNoControlado";
-import { EstadoFuncional } from "./EstadoFuncional";
-import { FormularioValidaciones } from "./FormularioValidaciones";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <>
-        {/* <FormularioNoControlado/> */}
-        {/* <EstadoFuncional/> */}
-        <FormularioValidaciones/>
+        <FormularioControlado/>
     </>
-);
+)
